@@ -10,9 +10,7 @@ export default function Assinatura({ navigation }: any) {
   const [isPremium, setIsPremium] = useState(false);
   const [assinatura, setAssinatura] = useState<any>(null);
 
-  // ========================
-  // FUNÇÕES DE FIREBASE
-  // ========================
+ 
   async function carregarStatus() {
     const user = auth.currentUser;
     if (!user) return navigation.replace("Login");
@@ -93,9 +91,6 @@ export default function Assinatura({ navigation }: any) {
     ]);
   }
 
-  // ========================
-  // CARREGAMENTO INICIAL
-  // ========================
   useEffect(() => {
     carregarStatus();
   }, []);
@@ -109,21 +104,17 @@ export default function Assinatura({ navigation }: any) {
       </SafeAreaView>
     );
 
-  // ========================
-  // RENDER
-  // ========================
+  
   return (
     <SafeAreaView style={s.safe}>
       <ScrollView contentContainerStyle={s.container}>
-        {/* Voltar */}
+        
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Text style={s.back}>← Voltar</Text>
         </TouchableOpacity>
 
-        {/* Título */}
         <Text style={s.title}>Assinatura</Text>
 
-        {/* Status e Plano */}
         <View style={s.card}>
           <Text style={s.cardTitle}>Plano Mensal — LuaTask Premium</Text>
           <Text style={s.cardSub}>Desbloqueia tema Dark e permite criar mais de 5 atividades.</Text>
@@ -135,7 +126,6 @@ export default function Assinatura({ navigation }: any) {
             </Text>
           </View>
 
-          {/* Botões */}
           <View style={{ marginTop: 12 }}>
             {!isPremium ? (
               <TouchableOpacity

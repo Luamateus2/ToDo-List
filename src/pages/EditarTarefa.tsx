@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     marginBottom: 25,
-    marginTop: 40,   // ⬅️ AGORA O TÍTULO FICA MAIS EMBAIXO
+    marginTop: 40,   
   },
   label: {
     fontSize: 16,

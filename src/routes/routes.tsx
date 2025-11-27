@@ -4,7 +4,7 @@ import RegisterScreen from "../pages/Cadastro";
 import Home from "../pages/Home";
 import AdicionarTarefa from "../pages/AdicionarTarefa";
 import Configuracoes from "../pages/Configuracoes";
-import { RootStackParamList } from "./types"; // IMPORTA AQUI
+import { RootStackParamList } from "./types"; 
 import EditarTarefa from "../pages/EditarTarefa";
 import AlterarCadastro from "../pages/AlterarCadastro";
 import Assinatura from "../pages/Assinatura";

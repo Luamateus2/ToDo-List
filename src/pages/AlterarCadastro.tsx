@@ -44,20 +44,16 @@ export default function AlterarCadastro({ navigation }: any) {
     carregarDados();
   }, []);
 
-  // SALVAR ALTERAÇÕES
   async function salvar() {
     try {
       if (!user) return;
 
-      // Atualiza nome no Firestore
       await updateDoc(doc(db, "usuarios", user.uid), { nome });
 
-      // Atualiza email no Firebase Auth
       if (email !== user.email) {
         await updateEmail(user, email);
       }
 
-      // Atualiza senha caso tenha digitado
       if (senha.trim().length > 0) {
         await updatePassword(user, senha);
       }

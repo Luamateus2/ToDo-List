@@ -82,7 +82,7 @@ export default function Home({ navigation }: any) {
     <SafeAreaView style={styles.safe} edges={["top","left","right"]}>
       <View style={styles.container}>
 
-        {/* CABEÇALHO */}
+        
         <View style={styles.header}>
           <Text style={styles.title}>LuaTask</Text>
           <TouchableOpacity onPress={() => navigation.navigate("Configuracoes")}>
@@ -90,7 +90,7 @@ export default function Home({ navigation }: any) {
           </TouchableOpacity>
         </View>
 
-        {/* DATA */}
+        
         <View style={styles.dateRow}>
           <TouchableOpacity onPress={previousDay}>
             <Text style={styles.arrow}>{"<"}</Text>
@@ -119,7 +119,7 @@ export default function Home({ navigation }: any) {
                   <Text style={styles.editText}>Editar</Text>
                 </TouchableOpacity>
 
-                {/* Botão Excluir */}
+                
                 <TouchableOpacity onPress={() => excluir(item.id)}>
                   <Text style={styles.delete}>X</Text>
                 </TouchableOpacity>

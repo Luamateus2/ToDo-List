@@ -55,7 +55,7 @@ export default function Cadastro() {
         keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 20}
       >
         <View style={styles.container}>
-          {/* 🔥 MESMA LOGO, MESMO STYLE DO LOGIN */}
+          
           <Image source={logo} style={styles.logo} />
 
           <Text style={styles.title}>Criar Conta</Text>

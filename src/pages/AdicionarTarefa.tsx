@@ -13,8 +13,6 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../routes/types";
-
-// FIREBASE
 import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../firebase";
 
@@ -81,13 +79,11 @@ export default function AdicionarTarefa() {
     }
   }
 
-  // pega altura da tela
   const screenHeight = Dimensions.get("window").height;
 
   return (
     <View style={styles.container}>
 
-      {/* 🔥 TÍTULO MAIS BAIXO (USANDO MARGIN TOP RESPONSIVA) */}
       <Text style={[styles.title, { marginTop: screenHeight * 0.05 }]}>
         Criar nova tarefa
       </Text>
@@ -134,7 +130,6 @@ export default function AdicionarTarefa() {
         })}
       </View>
 
-      {/* 🔥 BOTÃO DARK — "Selecionar todos" */}
       <TouchableOpacity style={styles.buttonDark} onPress={selecionarTodos}>
         <Text style={styles.buttonDarkText}>
           {diasSelecionados.length === 7
@@ -143,7 +138,6 @@ export default function AdicionarTarefa() {
         </Text>
       </TouchableOpacity>
 
-      {/* 🔥 BOTÃO DARK — "Salvar" */}
       <TouchableOpacity style={styles.buttonDark} onPress={salvarTarefa}>
         <Text style={styles.buttonDarkText}>Salvar Tarefa</Text>
       </TouchableOpacity>
@@ -182,7 +176,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#FFF", // NÃO FOI ALTERADO
+    backgroundColor: "#FFF", 
   },
 
   title: {
@@ -232,9 +226,8 @@ const styles = StyleSheet.create({
     color: "#333",
   },
 
-  /* 🔥 BOTÕES DARK */
   buttonDark: {
-    backgroundColor: "#595959", // dark
+    backgroundColor: "#595959",
     padding: 15,
     borderRadius: 10,
     marginTop: 10,
